@@ -93,7 +93,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Walmart",
-      role: "Business Analyst I, Health & Wellness",
+      role: "Business Analyst I, Health & Wellness - Pharmacy",
       start: "Apr 2016",
       end: "May 2017",
       bullets: [
@@ -103,7 +103,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Walmart",
-      role: "Project Analyst, Health & Wellness",
+      role: "Project Analyst, Health & Wellness - Pharmacy",
       start: "May 2015",
       end: "Apr 2016",
       bullets: [
