@@ -53,7 +53,7 @@ export const resumeData: ResumeData = {
   ],
   experience: [
     {
-      company: "Murphy USA",
+      company: "Murphy USA - Retail Systems",
       role: "Software Engineer III (Business Analysis & Product Delivery)",
       start: "Apr 2024",
       end: "Sep 2025",
