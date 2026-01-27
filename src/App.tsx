@@ -11,30 +11,43 @@ export default function App() {
   const [active, setActive] = useState<SectionKey>("summary");
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return d;
+  const q = query.trim().toLowerCase();
+  if (!q) return d;
 
-    const includesAny = (text: string) => text.toLowerCase().includes(q);
+  const includesAny = (text: string) => text.toLowerCase().includes(q);
 
-    return {
-      ...d,
-      skills: d.skills
-        .map((s) => ({
-          ...s,
-          items: s.items.filter((i) => includesAny(i) || includesAny(s.label)),
-        }))
-        .filter((s) => s.items.length > 0 || includesAny(s.label)),
-      experience: d.experience
-        .map((e) => ({
-          ...e,
-          bullets: e.bullets.filter(
-            (b) => includesAny(b) || includesAny(e.company) || includesAny(e.role)
-          ),
-        }))
-        .filter((e) => e.bullets.length > 0 || includesAny(e.company) || includesAny(e.role)),
-      education: d.education.filter((ed) => includesAny(ed.school) || includesAny(ed.degree)),
-    };
-  }, [d, query]);
+  const skills = d.skills
+    .map((s) => ({
+      ...s,
+      items: s.items.filter((i) => includesAny(i) || includesAny(s.label)),
+    }))
+    .filter((s) => s.items.length > 0 || includesAny(s.label));
+
+  const experience = d.experience
+    .map((e) => ({
+      ...e,
+      bullets: e.bullets.filter(
+        (b) => includesAny(b) || includesAny(e.company) || includesAny(e.role)
+      ),
+    }))
+    .filter((e) => e.bullets.length > 0 || includesAny(e.company) || includesAny(e.role));
+
+  const education = d.education.filter(
+    (ed) => includesAny(ed.school) || includesAny(ed.degree)
+  );
+
+  // NEW: summary only "matches" if it contains the query
+  const summaryMatches = includesAny(d.summary);
+  const summary = summaryMatches ? d.summary : "";
+
+  return {
+    ...d,
+    summary,
+    skills,
+    experience,
+    education,
+  };
+}, [d, query]);
 
   const nav = [
     { key: "summary" as const, label: "Summary" },
