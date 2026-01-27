@@ -68,7 +68,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Murphy USA",
-      role: "Senior Software Engineer",
+      role: "Software Engineer",
       start: "Feb 2023",
       end: "Aug 2024",
       bullets: [
