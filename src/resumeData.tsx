@@ -53,8 +53,8 @@ export const resumeData: ResumeData = {
   ],
   experience: [
     {
-      company: "Murphy USA - Retail Systems",
-      role: "Software Engineer III (Business Analysis & Product Delivery)",
+      company: "Murphy USA",
+      role: "Software Engineer III - Retail Systems ",
       start: "Apr 2024",
       end: "Sep 2025",
       bullets: [
@@ -67,8 +67,8 @@ export const resumeData: ResumeData = {
       ],
     },
     {
-      company: "Murphy USA - Retail Systems",
-      role: "Software Engineer",
+      company: "Murphy USA",
+      role: "Software Engineer - Retail Systems ",
       start: "Feb 2023",
       end: "Aug 2024",
       bullets: [
