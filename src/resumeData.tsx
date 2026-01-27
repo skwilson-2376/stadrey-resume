@@ -122,8 +122,8 @@ export const resumeData: ResumeData = {
       ],
     },
     {
-      company: "State of Arkansas",
-      role: "Financial Analyst / Resource Specialist",
+      company: "State of Arkansas - Insurance Department",
+      role: " Financial Analyst / Resource Specialist / ACA",
       start: "Oct 2013",
       end: "Nov 2014",
       bullets: [
