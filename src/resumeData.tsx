@@ -67,7 +67,7 @@ export const resumeData: ResumeData = {
       ],
     },
     {
-      company: "Murphy USA",
+      company: "Murphy USA - Retail Systems",
       role: "Software Engineer",
       start: "Feb 2023",
       end: "Aug 2024",
@@ -80,7 +80,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Murphy USA",
-      role: "Business Analyst II",
+      role: "Business Analyst II - Retail Systems",
       start: "Aug 2017",
       end: "Feb 2023",
       bullets: [
