@@ -7,7 +7,7 @@ type SectionKey = "summary" | "skills" | "experience" | "education";
 export default function App() {
   const d = resumeData;
 
-  const [query, setQuery] = useState("");
+  const [query] = useState("");
   const [active, setActive] = useState<SectionKey>("summary");
 
   const filtered = useMemo(() => {
