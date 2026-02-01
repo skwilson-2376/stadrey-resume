@@ -58,13 +58,10 @@ export const resumeData: ResumeData = {
       start: "Apr 2024",
       end: "Sep 2025",
       bullets: [
-        "Partnered with Marketing, Accounting, Operations, and Store Operations to gather and document requirements for enterprise promotional and rewards systems supporting the Murphy Rewards platform.",
-        "Designed and developed frontend UI for store employee login and authentication workflows, enabling secure access to internal promotional and rewards management features.",
-        "Built UI workflows for creating and managing promotional displays and offers; translated promotional business rules into validation, usability, and end-to-end process requirements.",
-        "Converted requirements into user stories, acceptance criteria, and testable behaviors; supported QA and UAT with clarifications, defect triage, and release readiness reviews.",
-        "Developed and enhanced business and performance metrics for governance reporting, compliance visibility, and operational decision-making.",
-        "Supported production troubleshooting, impact analysis, and issue resolution to improve stability and user experience.",
-      ],
+        "Rebuilt and enhanced end-to-end UI workflows for end-of-life (EOL) core store systems, including secure store-employee authentication, end-of-shift reporting, and fuel price management.",
+        "Implemented Okta-based authentication and verification within frontend UI workflows, enabling secure user login, session handling, and role-based access for internal retail systems."
+
+],
     },
     {
       company: "Murphy USA",
@@ -72,11 +69,11 @@ export const resumeData: ResumeData = {
       start: "Feb 2023",
       end: "Aug 2024",
       bullets: [
-        "Served as liaison between business stakeholders and development teams to define requirements and validate UI designs for promotional product management.",
-        "Analyzed workflows and system dependencies to identify process gaps and efficiency improvements.",
-        "Designed SQL data structures and analytics supporting financial, promotional, and operational dashboards.",
-        "Participated in Agile ceremonies including sprint planning, backlog refinement, and release coordination; supported deployment verification and post-release triage.",
-      ],
+        "Designed and developed frontend UI components and workflows for internal retail systems role-based access to promotional and rewards management features.",
+        "Enabled end-to-end UI workflows for creating, validating, and managing promotional discount displays and offers template configuration, translating complex promotional business rules into enforceable frontend logic, usability patterns, and system validations.",
+        "Implemented Okta-based authentication and verification within frontend UI workflows, enabling secure user login, session handling, and role-based access for internal retail systems."
+
+  ],
     },
     {
       company: "Murphy USA",
@@ -84,7 +81,7 @@ export const resumeData: ResumeData = {
       start: "Aug 2017",
       end: "Feb 2023",
       bullets: [
-        "Led requirements elicitation, documentation, and management for financial and operational systems across multiple business units.",
+        "Led requirements elicitation, documentation, and management for acccounting, marketing, financial, and operational systems across multiple business units.",
         "Translated stakeholder needs into user stories, workflows, functional specifications, and acceptance criteria; maintained traceability across delivery.",
         "Facilitated Agile planning and cross-team requirement reviews using Azure DevOps.",
         "Designed Power BI dashboards delivering compliance, financial performance, and risk insights to leadership.",
