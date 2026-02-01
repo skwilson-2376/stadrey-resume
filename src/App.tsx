@@ -7,7 +7,7 @@ type SectionKey = "summary" | "skills" | "experience" | "education";
 export default function App() {
   const d = resumeData;
 
-  // const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("");
   const [active, setActive] = useState<SectionKey>("summary");
 
   const filtered = useMemo(() => {
@@ -75,18 +75,18 @@ export default function App() {
           </div>
         </div>
 
-        {/* <div className="actions">
-          <input
+        <div className="actions">
+          {/* <input
             className="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search skills / tools / keywords…"
             aria-label="Search resume"
-          />
+          /> */}
           <button className="btn" onClick={() => window.print()}>
             Print / Save PDF
           </button>
-        </div> */}
+        </div>
       </header>
 
       <nav className="nav">
