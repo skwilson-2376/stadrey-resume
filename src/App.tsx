@@ -75,7 +75,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="actions">
+        {/* <div className="actions">
           <input
             className="search"
             value={query}
@@ -86,7 +86,7 @@ export default function App() {
           <button className="btn" onClick={() => window.print()}>
             Print / Save PDF
           </button>
-        </div>
+        </div> */}
       </header>
 
       <nav className="nav">
