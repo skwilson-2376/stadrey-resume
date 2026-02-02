@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { resumeData } from "./resumeData";
 import "./styles.css";
 
-type SectionKey = "summary" | "skills" | "experience" | "education";
+type SectionKey = "summary" | "skills" | "experience" | "education" | "certificates";
 
 export default function App() {
   const d = resumeData;
@@ -46,6 +46,7 @@ export default function App() {
     skills,
     experience,
     education,
+    certificates,
   };
 }, [d, query]);
 
@@ -54,6 +55,8 @@ export default function App() {
     { key: "skills" as const, label: "Skills" },
     { key: "experience" as const, label: "Experience" },
     { key: "education" as const, label: "Education" },
+    { key: "certificates" as const, label: "Certificates" },
+
   ];
 
   return (
@@ -166,6 +169,20 @@ export default function App() {
               </div>
             ))}
             {filtered.education.length === 0 && <p className="muted">No matches.</p>}
+          </section>
+        )}
+
+        {active === "certificates" && (
+          <section className="card">
+            <h2>Certificates</h2>
+            <ul className="certList">
+              {filtered.certificates?.map((c) => (
+                <li key={c.name}>
+                  <strong>{c.name}</strong>
+                  {c.issuer && <span className="muted"> — {c.issuer}</span>}
+                </li>
+              ))}
+            </ul>
           </section>
         )}
       </main>

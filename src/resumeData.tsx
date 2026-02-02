@@ -15,6 +15,7 @@ export type ResumeData = {
     bullets: string[];
   }[];
   education: { school: string; degree: string }[];
+  certificates: { name: string; issuer: string }[];
 };
 
 export const resumeData: ResumeData = {
@@ -133,6 +134,12 @@ export const resumeData: ResumeData = {
     {
       school: "University of Arkansas at Little Rock",
       degree: "Bachelor of Business Administration (BBA) — Management Information Systems",
+    },
+  ],
+certificates: [
+    {
+      name: "Google AI Essentials",
+      issuer: "Google"
     },
   ],
 };
