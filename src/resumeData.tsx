@@ -111,7 +111,7 @@ export const resumeData: ResumeData = {
     },
     {
       company: "Walmart",
-      role: "Planner, Global Travel Analytics",
+      role: "Planner, Global Travel & Analytics",
       start: "Nov 2014",
       end: "May 2015",
       bullets: [
