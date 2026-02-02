@@ -36,6 +36,9 @@ export default function App() {
     (ed) => includesAny(ed.school) || includesAny(ed.degree)
   );
 
+  const certificates = d.certificates.filter(
+    (ed) => includesAny(ed.name) || includesAny(ed.issuer)
+  );
   // NEW: summary only "matches" if it contains the query
   const summaryMatches = includesAny(d.summary);
   const summary = summaryMatches ? d.summary : "";
