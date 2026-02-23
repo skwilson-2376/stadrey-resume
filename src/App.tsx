@@ -54,6 +54,7 @@ export default function App() {
     experience,
     education,
     certificates,
+    portfolio,
   };
 }, [d, query]);
 
