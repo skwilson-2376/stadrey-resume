@@ -195,40 +195,55 @@ export default function App() {
             </ul>
           </section>
         )}
-        {active === "portfolio" && (
-          <section className="card">
-            <h2>Portfolio</h2>
-            <ul className="certList">
-             {filtered.portfolio?.map((c) => (
-  <li key={c.name} className="portfolioItem">
-    <strong>{c.name}</strong>
+       {active === "portfolio" && (
+  <section className="card">
+    <div className="portfolioHeader">
+      <h2>Portfolio</h2>
+      <p className="portfolioSub">
+        Enterprise business analysis artifacts showcasing requirements, governance,
+        and delivery frameworks.
+      </p>
+    </div>
 
-    <p>{c.description}</p>
+    <div className="portfolioGrid">
+      {(filtered.portfolio ?? []).map((p) => (
+        <article className="portfolioCard" key={p.name}>
+          <div className="portfolioCardTop">
+            <h3 className="portfolioTitle">{p.name}</h3>
+            {p.description && <p className="portfolioDesc">{p.description}</p>}
+          </div>
 
-    {c.tags && (
-      <div className="tags">
-        {c.tags.map((t) => (
-          <span key={t} className="tag">{t}</span>
-        ))}
-      </div>
-    )}
+          {!!p.tags?.length && (
+            <div className="tagRow">
+              {p.tags.map((t: string) => (
+                <span className="tag" key={t}>
+                  {t}
+                </span>
+              ))}
+            </div>
+          )}
 
-    {/* only show an actual link for the BRD document */}
-    {c.linkLabel === "View BRD" && (
- <button
-  className="portfolioLink"
-  onClick={() => setActive("portfolio")}
->
-    View Resume (PDF)
-  </button>
+          <div className="portfolioActions">
+            {p.linkUrl ? (
+              <a
+                className="btnSecondary"
+                href={p.linkUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {p.linkLabel || "View"}
+              </a>
+            ) : (
+              <span className="btnSecondary disabled" title="Add a linkUrl in resumeData.ts">
+                Link coming soon
+              </span>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
 )}
-
-  </li>
-))}
-
-            </ul>
-          </section>
-        )}
       </main>
 
       <footer className="footer">

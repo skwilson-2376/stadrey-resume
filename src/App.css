@@ -41,21 +41,101 @@
   color: #888;
 }
 
-.portfolio-grid {
+/* Portfolio */
+.portfolioHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.portfolioSub {
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+.portfolioGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  gap: 16px;
+  margin-top: 12px;
 }
 
-.portfolio-item {
-  padding: 18px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform 0.2s ease;
+.portfolioCard {
+  border-radius: 14px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  transition: transform 160ms ease, border-color 160ms ease;
 }
 
-.portfolio-item:hover {
-  transform: translateY(-4px);
+.portfolioCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.portfolioTitle {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+}
+
+.portfolioDesc {
+  margin: 0;
+  opacity: 0.88;
+  line-height: 1.45;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 0.78rem;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  opacity: 0.9;
+}
+
+.portfolioActions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* Reusable button style (matches your pill/nav vibe) */
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  transition: transform 160ms ease, 
+  background 160ms ease, border-color 160ms ease;
+}
+
+.btnSecondary:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.btnSecondary.disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
