@@ -214,16 +214,20 @@ export default function App() {
     )}
 
     {/* only show an actual link for the BRD document */}
-    {c.linkLabel === "View BRD" && c.linkUrl && (
-      <a
-        href={c.linkUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="portfolioLink"
-      >
-      View Resume (PDF)
-      </a>
-    )}
+    {c.linkLabel === "View BRD" && (
+  <button
+    className="portfolioLink"
+    onClick={() =>
+      window.open(
+        `${import.meta.env.BASE_URL}StadreyWilson_Resume.pdf`,
+        "_blank"
+      )
+    }
+  >
+    View Resume (PDF)
+  </button>
+)}
+
   </li>
 ))}
 
