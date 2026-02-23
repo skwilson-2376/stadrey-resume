@@ -16,7 +16,7 @@ export type ResumeData = {
   }[];
   education: { school: string; degree: string }[];
   certificates: { name: string; issuer: string }[];
-  portfolio: { name: string; description: string }[];
+  portfolio: { name: string; description: string; tags: string[]; linkLabel: string; linkUrl: string }[];
 
 };
 
@@ -144,5 +144,39 @@ certificates: [
       issuer: "Google"
     },
   ],
- portfolio: []
+portfolio: [
+    {
+      name: "Enterprise BRD – Retail Identity & Promotions Platform",
+      description:
+        "Enterprise Business Requirements Document with KPI alignment, governance controls, and audit-ready structure.",
+      tags: ["BRD", "Governance", "Retail", "Identity"],
+      linkLabel: "View BRD",
+      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
+    },
+    {
+      name: "RACI Stakeholder Matrix",
+      description:
+        "Accountability model across Sponsor, PO, BA, Engineering, Security, QA, and Users.",
+      tags: ["RACI", "Stakeholders", "Delivery"],
+      linkLabel: "View RACI",
+      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
+    },
+    {
+      name: "UAT Strategy & Test Suite",
+      description:
+        "UAT plan and test cases to validate requirements, support signoff, and reduce release risk.",
+      tags: ["UAT", "Testing", "Signoff"],
+      linkLabel: "View UAT",
+      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
+    },
+    {
+      name: "Requirements Traceability Matrix (RTM)",
+      description:
+        "Trace requirements → user stories → test cases to support scope control and audit readiness.",
+      tags: ["RTM", "Traceability", "Controls"],
+      linkLabel: "View RTM",
+      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
+    },
+  ],
+};
 };
