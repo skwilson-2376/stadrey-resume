@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { resumeData } from "./resumeData";
 import "./styles.css";
 
-type SectionKey = "summary" | "skills" | "experience" | "education" | "certificates";
+type SectionKey = "summary" | "skills" | "experience" | "education" | "certificates"|"portfolio";
 
 export default function App() {
   const d = resumeData;
@@ -21,6 +21,7 @@ export default function App() {
       ...s,
       items: s.items.filter((i) => includesAny(i) || includesAny(s.label)),
     }))
+
     .filter((s) => s.items.length > 0 || includesAny(s.label));
 
   const experience = d.experience
@@ -38,6 +39,9 @@ export default function App() {
 
   const certificates = d.certificates.filter(
     (ed) => includesAny(ed.name) || includesAny(ed.issuer)
+  );
+  const portfolio = d.portfolio.filter(
+    (ed) => includesAny(ed.name) || includesAny(ed.description)
   );
   // NEW: summary only "matches" if it contains the query
   const summaryMatches = includesAny(d.summary);

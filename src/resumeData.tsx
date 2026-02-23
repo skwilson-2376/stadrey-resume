@@ -16,6 +16,8 @@ export type ResumeData = {
   }[];
   education: { school: string; degree: string }[];
   certificates: { name: string; issuer: string }[];
+  portfolio: { name: string; description: string }[];
+
 };
 
 export const resumeData: ResumeData = {
@@ -142,4 +144,5 @@ certificates: [
       issuer: "Google"
     },
   ],
+ portfolio: []
 };
