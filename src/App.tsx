@@ -64,6 +64,8 @@ export default function App() {
     { key: "experience" as const, label: "Experience" },
     { key: "education" as const, label: "Education" },
     { key: "certificates" as const, label: "Certificates" },
+    { key: "portfolio" as const, label: "Portfolio" },
+
 
   ];
 
@@ -188,6 +190,19 @@ export default function App() {
                 <li key={c.name}>
                   <strong>{c.name}</strong>
                   {c.issuer && <span className="muted"> — {c.issuer}</span>}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {active === "portfolio" && (
+          <section className="card">
+            <h2>Portfolio</h2>
+            <ul className="certList">
+              {filtered.portfolio?.map((c) => (
+                <li key={c.name}>
+                  <strong>{c.name}</strong>
+                  
                 </li>
               ))}
             </ul>
