@@ -213,14 +213,15 @@ export default function App() {
       </div>
     )}
 
-    {c.linkUrl && (
+    {/* only show an actual link for the BRD document */}
+    {c.linkLabel === "View BRD" && c.linkUrl && (
       <a
         href={c.linkUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="portfolioLink"
       >
-        {c.linkLabel || "View Project"}
+        {c.linkLabel}
       </a>
     )}
   </li>
