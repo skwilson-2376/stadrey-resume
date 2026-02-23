@@ -221,7 +221,7 @@ export default function App() {
         rel="noopener noreferrer"
         className="portfolioLink"
       >
-        {c.linkLabel}
+      View Resume (PDF)
       </a>
     )}
   </li>
