@@ -151,7 +151,7 @@ portfolio: [
         "Enterprise Business Requirements Document with KPI alignment, governance controls, and audit-ready structure.",
       tags: ["BRD", "Governance", "Retail", "Identity"],
       linkLabel: "View BRD",
-      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
+      linkUrl: "https://docs.google.com/document/d/1C8eCpJdEqd-A6HS5jsL7TmcU6vJtIQnuGDAW6kGLz3M/edit?usp=drive_link",
     },
     {
       name: "RACI Stakeholder Matrix",
