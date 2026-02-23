@@ -215,15 +215,10 @@ export default function App() {
 
     {/* only show an actual link for the BRD document */}
     {c.linkLabel === "View BRD" && (
-  <button
-    className="portfolioLink"
-    onClick={() =>
-      window.open(
-        `${import.meta.env.BASE_URL}StadreyWilson_Resume.pdf`,
-        "_blank"
-      )
-    }
-  >
+ <button
+  className="portfolioLink"
+  onClick={() => setActive("portfolio")}
+>
     View Resume (PDF)
   </button>
 )}
