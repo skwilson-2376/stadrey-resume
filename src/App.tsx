@@ -199,12 +199,33 @@ export default function App() {
           <section className="card">
             <h2>Portfolio</h2>
             <ul className="certList">
-              {filtered.portfolio?.map((c) => (
-                <li key={c.name}>
-                  <strong>{c.name}</strong>
-                  
-                </li>
-              ))}
+             {filtered.portfolio?.map((c) => (
+  <li key={c.name} className="portfolioItem">
+    <strong>{c.name}</strong>
+
+    <p>{c.description}</p>
+
+    {c.tags && (
+      <div className="tags">
+        {c.tags.map((t) => (
+          <span key={t} className="tag">{t}</span>
+        ))}
+      </div>
+    )}
+
+    {c.linkUrl && (
+      <a
+        href={c.linkUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="portfolioLink"
+      >
+        {c.linkLabel || "View Project"}
+      </a>
+    )}
+  </li>
+))}
+
             </ul>
           </section>
         )}
