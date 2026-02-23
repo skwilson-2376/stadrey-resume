@@ -57,7 +57,7 @@ export const resumeData: ResumeData = {
   experience: [
     {
       company: "Murphy USA",
-      role: "Software Engineer III - Retail Systems ",
+      role: "POS Software Engineer III - Retail Systems ",
       start: "Apr 2024",
       end: "Sep 2025",
       bullets: [
