@@ -146,13 +146,13 @@ certificates: [
   ],
 portfolio: [
     {
-      name: "Enterprise BRD – Retail Identity & Promotions Platform",
-      description:
-        "Enterprise Business Requirements Document with KPI alignment, governance controls, and audit-ready structure.",
-      tags: ["BRD", "Governance", "Retail", "Identity"],
-      linkLabel: "View BRD",
-      linkUrl: "https://docs.google.com/document/d/1C8eCpJdEqd-A6HS5jsL7TmcU6vJtIQnuGDAW6kGLz3M/edit?usp=drive_link",
-    },
+  name: "Enterprise BRD – Retail Identity & Promotions Platform",
+  description:
+    "Enterprise Business Requirements Document with KPI alignment, governance controls, and audit-ready structure.",
+  tags: ["BRD", "Governance", "Retail", "Identity"],
+  linkLabel: "View Resume (PDF)",
+  linkUrl: `${import.meta.env.BASE_URL}StadreyWilson_Resume.pdf`,
+},
     {
       name: "RACI Stakeholder Matrix",
       description:
