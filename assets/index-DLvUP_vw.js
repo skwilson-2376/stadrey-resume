@@ -10,7 +10,7 @@ Error generating stack: `+a.message+`
 `)}function ry(){const[j,al]=vl.useState("UAT Strategy & Test Suite"),[B,m]=vl.useState("Release 1.0"),[C,L]=vl.useState("UAT"),[ol,O]=vl.useState("Stadrey Wilson"),[z]=vl.useState(fy),[T,W]=vl.useState(""),[H,el]=vl.useState("All"),[bl,jl]=vl.useState(sy),El=vl.useMemo(()=>{const _=T.trim().toLowerCase();return bl.filter(M=>{const fl=H==="All"?!0:M.status===H,E=`${M.id} ${M.scenario} ${M.preconditions} ${M.expected} ${M.owner} ${M.notes}`.toLowerCase(),k=!_||E.includes(_);return fl&&k})},[bl,T,H]),X=(_,M)=>{jl(fl=>fl.map(E=>E.id===_?{...E,...M}:E))},Ml=()=>{jl(_=>[..._,{id:dy(),scenario:"New scenario",preconditions:"",steps:["Step 1"],expected:"",status:"Pending",owner:"",notes:""}])},kl=_=>jl(M=>M.filter(fl=>fl.id!==_)),Ul=()=>{const _=oy(El),M=new Blob([_],{type:"text/csv;charset=utf-8;"}),fl=URL.createObjectURL(M),E=document.createElement("a");E.href=fl,E.download="uat_test_suite.csv",E.click(),URL.revokeObjectURL(fl)},gl=()=>window.print(),Gl=vl.useMemo(()=>{const _=bl.length,M=bl.filter(G=>G.status==="Pass").length,fl=bl.filter(G=>G.status==="Fail").length,E=bl.filter(G=>G.status==="Blocked").length,k=bl.filter(G=>G.status==="Pending").length;return{total:_,pass:M,fail:fl,blocked:E,pending:k}},[bl]);return f.jsxs("div",{id:"uat",style:{maxWidth:1100,margin:"0 auto",padding:16},children:[f.jsx("style",{children:`
         @media print {
           button, input, select, .noPrint { display: none !important; }
-          body { background: #fff !important; }
+          body { background: #e8eef7fd !important; }
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
