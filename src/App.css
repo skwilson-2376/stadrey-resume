@@ -139,3 +139,12 @@
   cursor: not-allowed;
   opacity: 0.55;
 }
+
+/* specific styling for RTM cards */
+#rtm .card {
+  background: rgba(39, 65, 83, 0.719) !important;
+}
+
+#uat .card {
+  background: rgba(39, 65, 83, 0.719) !important;
+}
