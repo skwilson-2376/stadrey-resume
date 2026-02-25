@@ -14,14 +14,14 @@ Error generating stack: `+a.message+`
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
-        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: rgba(255,255,255,0.03); }
+        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: gray; color: darkblue; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .muted { opacity: 0.85; font-size: 13px; }
-        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(255,255,255,0.14); font-size:12px; }
+        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(55, 111, 148, 0.14); font-size:12px; }
         table { width: 100%; border-collapse: collapse; }
         th, td { border-bottom: 1px solid rgba(255,255,255,0.10); padding: 10px; vertical-align: top; text-align: left; }
         th { font-weight: 700; }
-        input, select, textarea { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.04); color: inherit; }
+        input, select, textarea { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.16); color: inherit; }
         textarea { min-height: 70px; }
         .btn { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.08); color: inherit; cursor:pointer; }
         .btn:hover { background: rgba(255,255,255,0.12); }
