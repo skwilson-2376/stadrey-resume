@@ -224,7 +224,7 @@ export default function RTM() {
           tr { page-break-inside: avoid; page-break-after: auto; }
           textarea { border: none !important; background: transparent !important; }
         }
-        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: rgba(128, 155, 185, 0.1); }
+        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: rgba(158, 170, 184, 0.66); }
         .row { display:flex; gap: 10px; align-items: center; }
         .right { margin-left: auto; }
         .muted { opacity: 0.85; font-size: 13px; }
