@@ -10,14 +10,14 @@ Error generating stack: `+a.message+`
 `)}function ry(){const[j,al]=vl.useState("UAT Strategy & Test Suite"),[B,m]=vl.useState("Release 1.0"),[C,L]=vl.useState("UAT"),[ol,O]=vl.useState("Stadrey Wilson"),[z]=vl.useState(fy),[T,W]=vl.useState(""),[H,el]=vl.useState("All"),[bl,jl]=vl.useState(sy),El=vl.useMemo(()=>{const _=T.trim().toLowerCase();return bl.filter(M=>{const fl=H==="All"?!0:M.status===H,E=`${M.id} ${M.scenario} ${M.preconditions} ${M.expected} ${M.owner} ${M.notes}`.toLowerCase(),k=!_||E.includes(_);return fl&&k})},[bl,T,H]),X=(_,M)=>{jl(fl=>fl.map(E=>E.id===_?{...E,...M}:E))},Ml=()=>{jl(_=>[..._,{id:dy(),scenario:"New scenario",preconditions:"",steps:["Step 1"],expected:"",status:"Pending",owner:"",notes:""}])},kl=_=>jl(M=>M.filter(fl=>fl.id!==_)),Ul=()=>{const _=oy(El),M=new Blob([_],{type:"text/csv;charset=utf-8;"}),fl=URL.createObjectURL(M),E=document.createElement("a");E.href=fl,E.download="uat_test_suite.csv",E.click(),URL.revokeObjectURL(fl)},gl=()=>window.print(),Gl=vl.useMemo(()=>{const _=bl.length,M=bl.filter(G=>G.status==="Pass").length,fl=bl.filter(G=>G.status==="Fail").length,E=bl.filter(G=>G.status==="Blocked").length,k=bl.filter(G=>G.status==="Pending").length;return{total:_,pass:M,fail:fl,blocked:E,pending:k}},[bl]);return f.jsxs("div",{id:"uat",style:{maxWidth:1100,margin:"0 auto",padding:16},children:[f.jsx("style",{children:`
         @media print {
           button, input, select, .noPrint { display: none !important; }
-          body { background: #e8eef7fd !important; }
+          body { background: #316cbe49 !important; }
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
-        .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #f0f0f0; color: black; }
+        .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #c6dae9c0; color: black; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .muted { opacity: 0.85; font-size: 13px; color: darkblue; }
-        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(124, 169, 199, 0.07); font-size:12px; }
+        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(201, 225, 241, 0.04); font-size:12px; }
         table { width: 100%; border-collapse: collapse; border: 1px solid darkblue; }
         th, td { border: 1px solid darkblue; padding: 10px; vertical-align: top; text-align: left; }
         th { font-weight: 700; }
@@ -38,7 +38,7 @@ Error generating stack: `+a.message+`
           tr { page-break-inside: avoid; page-break-after: auto; }
           textarea { border: none !important; background: transparent !important; }
         }
-        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: rgba(255,255,255,0.03); }
+        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: rgba(73, 120, 173, 0.24); }
         .row { display:flex; gap: 10px; align-items: center; }
         .right { margin-left: auto; }
         .muted { opacity: 0.85; font-size: 13px; }
