@@ -115,6 +115,9 @@ export default function App() {
           {active !== "summary" && prevActive.current === "summary" && (
             <button className="btn" onClick={() => setActive("summary")}>Back</button>
           )}
+          {(active === "uat" || active === "rtm") && (
+            <button className="btn" onClick={() => setActive("portfolio")}>Back to Portfolio</button>
+          )}
           <button className="btn" onClick={() => window.print()}>
             Print / Save PDF
           </button>
