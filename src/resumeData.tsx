@@ -151,7 +151,7 @@ portfolio: [
     "Enterprise Business Requirements Document with KPI alignment, governance controls, and audit-ready structure.",
   tags: ["BRD", "Governance", "Retail", "Identity"],
   linkLabel: "View Resume (PDF)",
-  linkUrl: `${import.meta.env.BASE_URL}StadreyWilson_Resume.pdf`,
+  linkUrl: `${import.meta.env.BASE_URL}brd.pdf`,
 },
     {
       name: "RACI Stakeholder Matrix",
