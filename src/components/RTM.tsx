@@ -227,7 +227,7 @@ export default function RTM() {
         .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #d6e7f5; color: black; }
         .row { display:flex; gap: 10px; align-items: center; }
         .right { margin-left: auto; }
-        .muted { opacity: 0.85; font-size: 13px; }
+        .muted { opacity: 0.85; font-size: 13px; color: darkblue; }
         .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid  rgba(201, 225, 241, 0.04); font-size:12px; }
         .btn { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.08); color: inherit; cursor:pointer; }
         .btn:hover { background: rgba(255,255,255,0.12); }
