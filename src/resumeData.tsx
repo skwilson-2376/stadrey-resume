@@ -159,7 +159,7 @@ portfolio: [
         "Accountability model across Sponsor, PO, BA, Engineering, Security, QA, and Users.",
       tags: ["RACI", "Stakeholders", "Delivery"],
       linkLabel: "View RACI",
-      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
+  linkUrl: `${import.meta.env.BASE_URL}raci.pdf`,
     },
     {
       name: "UAT Strategy & Test Suite",
