@@ -175,14 +175,14 @@ export default function UAT() {
       <style>{`
         @media print {
           button, input, select, .noPrint { display: none !important; }
-          body { background: #e8eef7fd !important; }
+          body { background: #a7c0e48f !important; }
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
         .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #f0f0f0; color: black; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .muted { opacity: 0.85; font-size: 13px; color: darkblue; }
-        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(201, 225, 241, 0.75); font-size:12px; }
+        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(201, 225, 241, 0.04); font-size:12px; }
         table { width: 100%; border-collapse: collapse; border: 1px solid darkblue; }
         th, td { border: 1px solid darkblue; padding: 10px; vertical-align: top; text-align: left; }
         th { font-weight: 700; }
