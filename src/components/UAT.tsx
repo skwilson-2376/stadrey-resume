@@ -175,7 +175,7 @@ export default function UAT() {
       <style>{`
         @media print {
           button, input, select, .noPrint { display: none !important; }
-          body { background: #fff !important; }
+          body { background: #e8eef7fd !important; }
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
