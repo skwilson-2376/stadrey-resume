@@ -170,7 +170,7 @@ export default function UAT() {
   }, [cases]);
 
   return (
-    <div id="uat" style={{ maxWidth: 1300, margin: "0 auto", padding: 16 }}>
+    <div id="uat" style={{ maxWidth: 1500, margin: "0 auto", padding: 16 }}>
       {/* Print styles: only show content, hide controls */}
       <style>{`
         @media print {
