@@ -112,9 +112,13 @@ export default function App() {
             placeholder="Search skills / tools / keywords…"
             aria-label="Search resume"
           /> */}
-          {active !== "summary" && prevActive.current === "summary" && (
+          {(active !== "summary" && prevActive.current === "summary") ||
+            active === "experience" ||
+            active === "education" ||
+            active === "certificates" ||
+            active === "portfolio" ? (
             <button className="btn" onClick={() => setActive("summary")}>Back</button>
-          )}
+          ) : null}
           {(active === "uat" || active === "rtm") && (
             <button className="btn" onClick={() => setActive("portfolio")}>Back to Portfolio</button>
           )}
