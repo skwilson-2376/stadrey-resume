@@ -179,7 +179,7 @@ export default function UAT() {
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
-        .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #f0f0f0; color: darkblue; }
+        .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #f0f0f0; color: black; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .muted { opacity: 0.85; font-size: 13px; color: darkblue; }
         .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(164, 184, 197, 0.73); font-size:12px; }
