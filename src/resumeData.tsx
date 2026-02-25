@@ -162,13 +162,13 @@ portfolio: [
       linkUrl: `${import.meta.env.BASE_URL}raci.pdf`,
     },
     {
-      name: "UAT Strategy & Test Suite",
-      description:
-        "UAT plan and test cases to validate requirements, support signoff, and reduce release risk.",
-      tags: ["UAT", "Testing", "Signoff"],
-      linkLabel: "View UAT",
-      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
-    },
+  name: "UAT Strategy & Test Suite",
+  description:
+    "UAT plan and test cases to validate requirements, support signoff, and reduce release risk.",
+  tags: ["UAT", "Testing", "Signoff"],
+  linkLabel: "View UAT",
+  linkUrl: "#uat", 
+},
     {
       name: "Requirements Traceability Matrix (RTM)",
       description:
