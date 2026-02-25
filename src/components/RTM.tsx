@@ -219,16 +219,16 @@ export default function RTM() {
       <style>{`
         @media print {
           .noPrint { display: none !important; }
-          body { background: #fff !important; }
+          body { background:  #316cbe49 !important; }
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
           textarea { border: none !important; background: transparent !important; }
         }
-        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: rgba(158, 170, 184, 0.66); }
+        .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #d6e7f5; color: black; }
         .row { display:flex; gap: 10px; align-items: center; }
         .right { margin-left: auto; }
         .muted { opacity: 0.85; font-size: 13px; }
-        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(255,255,255,0.14); font-size:12px; }
+        .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid  rgba(201, 225, 241, 0.04); font-size:12px; }
         .btn { padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.08); color: inherit; cursor:pointer; }
         .btn:hover { background: rgba(255,255,255,0.12); }
         input, select, textarea { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.04); color: inherit; }

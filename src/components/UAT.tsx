@@ -170,7 +170,7 @@ export default function UAT() {
   }, [cases]);
 
   return (
-    <div id="uat" style={{ maxWidth: 1100, margin: "0 auto", padding: 16 }}>
+    <div id="uat" style={{ maxWidth: 1300, margin: "0 auto", padding: 16 }}>
       {/* Print styles: only show content, hide controls */}
       <style>{`
         @media print {
@@ -179,7 +179,7 @@ export default function UAT() {
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
-        .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #8bbbe041; color: black; }
+        .card { border: 2px solid darkblue; border-radius: 14px; padding: 14px; background: #d6e7f5; color: black; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .muted { opacity: 0.85; font-size: 13px; color: darkblue; }
         .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(201, 225, 241, 0.04); font-size:12px; }
