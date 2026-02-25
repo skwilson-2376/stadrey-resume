@@ -234,7 +234,7 @@ export default function RTM() {
         input, select, textarea { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.04); color: inherit; }
         textarea { min-height: 52px; }
         table { width: 100%; border-collapse: collapse; }
-        th, td { border-bottom: 1px solid rgba(255,255,255,0.10); padding: 10px; vertical-align: top; }
+        th, td { border: 1px solid darkblue; padding: 10px; vertical-align: top; text-align: left; }
         th { font-weight: 700; white-space: nowrap; }
         .gap { border-left: 4px solid rgba(245, 158, 11, 0.9); } /* amber */
         .ok { border-left: 4px solid rgba(34, 197, 94, 0.9); } /* green */
