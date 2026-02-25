@@ -198,7 +198,7 @@ export default function App() {
        {active === "portfolio" && (
   <section className="card">
     <div className="portfolioHeader">
-      <h2>Portfolio</h2>
+      <h2>Business Analysis Portfolio</h2>
       <p className="portfolioSub">
         Enterprise business analysis artifacts showcasing requirements, governance,
         and delivery frameworks.
