@@ -16,7 +16,7 @@ Error generating stack: `+a.message+`
         }
         .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: #f0f0f0; color: darkblue; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        .muted { opacity: 0.85; font-size: 13px; }
+        .muted { opacity: 0.85; font-size: 13px; color: darkblue; }
         .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(55, 111, 148, 0.14); font-size:12px; }
         table { width: 100%; border-collapse: collapse; }
         th, td { border-bottom: 1px solid rgba(255,255,255,0.10); padding: 10px; vertical-align: top; text-align: left; }
