@@ -14,7 +14,7 @@ Error generating stack: `+a.message+`
           table { page-break-inside: auto; }
           tr { page-break-inside: avoid; page-break-after: auto; }
         }
-        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: lightgray; color: darkblue; }
+        .card { border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 14px; background: #f0f0f0; color: darkblue; }
         .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .muted { opacity: 0.85; font-size: 13px; }
         .pill { display:inline-block; padding: 4px 10px; border-radius: 999px; border:1px solid rgba(55, 111, 148, 0.14); font-size:12px; }
