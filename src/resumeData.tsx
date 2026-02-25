@@ -175,7 +175,7 @@ portfolio: [
         "Trace requirements → user stories → test cases to support scope control and audit readiness.",
       tags: ["RTM", "Traceability", "Controls"],
       linkLabel: "View RTM",
-      linkUrl: "PASTE_GOOGLE_DOC_LINK_HERE",
+      linkUrl: "#rtm",
     },
   ],
 };

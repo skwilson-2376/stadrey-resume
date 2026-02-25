@@ -1,9 +1,10 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import { resumeData } from "./resumeData";
 import "./styles.css";
-import UAT from "./components/UAT"; // import UAT component
+import UAT from "./components/UAT"; 
+import RTM from "./components/RTM";
 
-type SectionKey = "summary" | "skills" | "experience" | "education" | "certificates" | "portfolio" | "uat"; // added uat section
+type SectionKey = "summary" | "skills" | "experience" | "education" | "certificates" | "portfolio" | "uat" | "rtm"; // added uat section
 
 
 export default function App() {
@@ -11,15 +12,20 @@ export default function App() {
 
   const [query] = useState("");
   const [active, setActive] = useState<SectionKey>("summary");
+  const prevActive = useRef<SectionKey>("summary");
 
-  // support deep linking via hash (e.g. #uat)
+  // support deep linking via hash (e.g. #uat or #rtm)
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
-    if (hash === "uat") {
-      setActive("uat");
+    if (hash && hash in { uat: true, rtm: true }) {
+      setActive(hash as SectionKey);
     }
-    // other sections could be added here if needed
   }, []);
+
+  // keep previous section to know if we just left summary
+  useEffect(() => {
+    prevActive.current = active;
+  }, [active]);
 
   const filtered = useMemo(() => {
   const q = query.trim().toLowerCase();
@@ -106,6 +112,9 @@ export default function App() {
             placeholder="Search skills / tools / keywords…"
             aria-label="Search resume"
           /> */}
+          {active !== "summary" && prevActive.current === "summary" && (
+            <button className="btn" onClick={() => setActive("summary")}>Back</button>
+          )}
           <button className="btn" onClick={() => window.print()}>
             Print / Save PDF
           </button>
@@ -244,12 +253,9 @@ export default function App() {
                 onClick={(e) => {
                   if (p.linkUrl && p.linkUrl.startsWith("#")) {
                     e.preventDefault();
-                    const section = p.linkUrl.slice(1);
-                    if (section === "uat") {
-                      setActive("uat");
-                      // optionally scroll to top
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    }
+                    const section = p.linkUrl.slice(1) as SectionKey;
+                    setActive(section);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }
                 }}
               >
@@ -270,6 +276,12 @@ export default function App() {
         {active === "uat" && (
           <section className="card">
             <UAT />
+          </section>
+        )}
+
+        {active === "rtm" && (
+          <section className="card">
+            <RTM />
           </section>
         )}
 
