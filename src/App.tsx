@@ -1,14 +1,25 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { resumeData } from "./resumeData";
 import "./styles.css";
+import UAT from "./components/UAT"; // import UAT component
 
-type SectionKey = "summary" | "skills" | "experience" | "education" | "certificates"|"portfolio";
+type SectionKey = "summary" | "skills" | "experience" | "education" | "certificates" | "portfolio" | "uat"; // added uat section
+
 
 export default function App() {
   const d = resumeData;
 
   const [query] = useState("");
   const [active, setActive] = useState<SectionKey>("summary");
+
+  // support deep linking via hash (e.g. #uat)
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "uat") {
+      setActive("uat");
+    }
+    // other sections could be added here if needed
+  }, []);
 
   const filtered = useMemo(() => {
   const q = query.trim().toLowerCase();
@@ -65,8 +76,7 @@ export default function App() {
     { key: "education" as const, label: "Education" },
     { key: "certificates" as const, label: "Certificates" },
     { key: "portfolio" as const, label: "Portfolio" },
-
-
+    // the UAT section is not in the nav by default; it is reached via portfolio link
   ];
 
   return (
@@ -228,8 +238,20 @@ export default function App() {
               <a
                 className="btnSecondary"
                 href={p.linkUrl}
-                target="_blank"
-                rel="noreferrer"
+                // internal anchors should not open a new tab and should trigger the app
+                target={p.linkUrl && p.linkUrl.startsWith("#") ? undefined : "_blank"}
+                rel={p.linkUrl && p.linkUrl.startsWith("#") ? undefined : "noreferrer"}
+                onClick={(e) => {
+                  if (p.linkUrl && p.linkUrl.startsWith("#")) {
+                    e.preventDefault();
+                    const section = p.linkUrl.slice(1);
+                    if (section === "uat") {
+                      setActive("uat");
+                      // optionally scroll to top
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }
+                }}
               >
                 {p.linkLabel || "View"}
               </a>
@@ -244,6 +266,13 @@ export default function App() {
     </div>
   </section>
 )}
+
+        {active === "uat" && (
+          <section className="card">
+            <UAT />
+          </section>
+        )}
+
       </main>
 
       <footer className="footer">

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 type Status = "Pending" | "Pass" | "Fail" | "Blocked";
 
@@ -170,7 +170,7 @@ export default function UAT() {
   }, [cases]);
 
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto", padding: 16 }}>
+    <div id="uat" style={{ maxWidth: 1100, margin: "0 auto", padding: 16 }}>
       {/* Print styles: only show content, hide controls */}
       <style>{`
         @media print {
