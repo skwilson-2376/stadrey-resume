@@ -146,7 +146,7 @@ certificates: [
   ],
 portfolio: [
     {
-  name: "Enterprise BRD – Retail Identity & Promotions Platform",
+  name: "Enterprise BRD ",
   description:
     "Enterprise Business Requirements Document with KPI alignment, governance controls, and audit-ready structure.",
   tags: ["BRD", "Governance", "Retail", "Identity"],
@@ -159,7 +159,7 @@ portfolio: [
         "Accountability model across Sponsor, PO, BA, Engineering, Security, QA, and Users.",
       tags: ["RACI", "Stakeholders", "Delivery"],
       linkLabel: "View RACI",
-  linkUrl: `${import.meta.env.BASE_URL}raci.pdf`,
+      linkUrl: `${import.meta.env.BASE_URL}raci.pdf`,
     },
     {
       name: "UAT Strategy & Test Suite",
