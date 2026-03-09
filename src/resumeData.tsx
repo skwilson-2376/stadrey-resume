@@ -141,7 +141,11 @@ export const resumeData: ResumeData = {
 certificates: [
     {
       name: "Google AI Essentials",
-      issuer: "Google"
+      issuer: "Google",
+    },
+    {
+      name: "Certified ScrumMaster (CSM)",
+      issuer: "Scrum Alliance",
     },
   ],
 portfolio: [
