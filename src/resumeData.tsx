@@ -154,7 +154,7 @@ portfolio: [
   description:
     "Enterprise Business Requirements Document with KPI alignment, governance controls, and audit-ready structure.",
   tags: ["BRD", "Governance", "Retail", "Identity"],
-  linkLabel: "View Resume (PDF)",
+  linkLabel: "View BRD (PDF)",
   linkUrl: `${import.meta.env.BASE_URL}brd.pdf`,
 },
     {
