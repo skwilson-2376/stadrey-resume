@@ -47,7 +47,7 @@ export const resumeData: ResumeData = {
     },
     {
       label: "Delivery & Tools",
-      items: ["Agile / Scrum", "Azure DevOps", "Backlog refinement", "Release validation", "Production support & impact analysis"],
+      items: ["Agile / Scrum", "Azure DevOps", "GitHub", "Backlog refinement", "Release validation", "Production support & impact analysis"],
     },
     {
       label: "Technical (supporting)",
